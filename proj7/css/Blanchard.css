@@ -1,0 +1,934 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'OpenSans',sans-serif;
+  font-weight: 400;
+}
+
+:root {
+  --gap: 30px;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  max-width: 1920px;
+  padding-left: 160px;
+  padding-right: 160px;  /* менять */
+}
+
+/*    общее для этого документа     */
+
+.h2-header {
+  font-weight: 400;
+  font-size: 48px;
+  color: #333;
+  margin: 0;
+}
+
+.p-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: #333;
+  margin: 0;
+}
+
+.h3-header {
+  font-weight: 600;
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+/*    header     */
+
+.header-container {
+  background-color: black;
+  max-width: 100%;
+  justify-content: space-between;
+  height: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.nav__list {
+  margin-top: 10px;
+  gap: 80px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.nav__link {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+/* .nav__link:focus {
+  outline: 1px solid #71A7E2;
+} */
+
+.nav__link:hover {
+  color:  #c283f3;
+}
+
+.nav__link:active {
+  outline: none;
+  color: #7943a4;
+}
+
+.header-loop svg path {
+  transition: fill 0.3s ease-in-out,stroke 0.3s ease-in-out;
+  fill: white;
+}
+
+.header-loop svg rect {
+  transition: fill 0.3s ease-in-out,stroke 0.3s ease-in-out;
+  fill: white;
+}
+
+.header-loop:hover svg path {
+  fill: #c283f3;
+}
+
+.header-loop:active svg path {
+  outline: none;
+  fill: #7943a4;
+}
+
+.header-loop:hover svg rect {
+  fill: #c283f3;
+}
+
+.header-loop:active svg rect {
+  outline: none;
+  fill: #7943a4;
+}
+
+.header-btn {
+  margin-left: 20px;
+}
+
+/*        main-box             */
+
+.main-box-container {
+  max-width: 100%;
+  background-image: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 2.jpg');
+  height: 800px;  /* менять */
+  padding-top: 0;
+}
+
+.main-box__content {
+  margin-top: 150px;  /* менять */
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
+.main-box__header {
+  margin: 0;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 94%;
+  color: #fff;
+}
+
+.main-box__text {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 90px;  /* менять */
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 167%;
+  color: #fff;
+}
+
+.main-box__btn {
+  border-radius: 100px;
+  padding: 17px 35px;
+  width: 314px;
+  height: 70px;
+  background: #9d5cd0;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.main-box__btn:focus {
+  outline: 3px solid #d1a9f0;
+}
+
+
+.main-box__btn:hover {
+  background-color:  #c283f3;
+}
+
+.main-box__btn:active {
+  outline: none;
+  background-color: #7943a4;
+}
+
+
+
+/*     О нас       */
+
+.about-us-container {
+  max-width: 100%;
+}
+
+.about-us__content {
+  margin-top: 80px;
+  max-width: 1080px;
+  margin-bottom: 80px;   /*  менять */
+}
+
+.about-us__header {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+/*     Галерея      */
+
+.gal-container {
+  width: 100%;
+  background-image: url('../img/gal-back.jpg');
+  height: 600px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.gal-header {
+  margin: 0;
+  font-weight: 400;
+  font-size: 48px;
+  color: #fff;
+}
+
+.gal-img {
+  padding-top: 85px;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.gal-1 {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-check {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.form-box {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.form-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: #fff;
+  margin-left: 10px;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.gal-input {
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.form-text {
+  transition: color 0.3s ease-in-out;
+}
+
+
+.form-text:hover {
+  color: #c283f3;
+}
+
+
+
+/*    Каталог    */
+
+.cat-container {
+  padding-top: 80px;
+}
+
+.cat-row {
+  row-gap: 50px;
+}
+
+.top-col {
+  max-width: 1080px;
+}
+
+.cat-header {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.cat-box {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;  /* менять  */
+  justify-content: center;
+}
+
+.cat-col {
+  display: flex;
+}
+
+.cat-img {
+  min-width: 320px;
+}
+
+
+.cat-time {
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #999;
+}
+
+/*    События    */
+
+.event-container {
+  padding-top: 80px;
+  flex-wrap: wrap;
+
+}
+
+.event-box {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.event-header {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.event-address {
+  display: flex;
+  font-weight: 600;
+  font-size: 12px;
+  color: #999;
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.event-text {
+  margin-top: 13px;
+  margin-bottom: 50px;
+}
+
+.box-bot {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;   /* исправить */
+}
+
+.event-btn {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: #9d5cd0;
+  border-bottom: 1px solid #9d5cd0;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.event-btn:hover {
+  color:  #c283f3;
+  border-color: #c283f3;
+}
+
+.event-btn:active {
+  outline: none;
+  color: #7943a4;
+  border-color: #7943a4;
+}
+
+.event-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn-box {
+  padding-left: 35px;
+}
+
+/* проекты  */
+
+.proj-container {
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-bottom: 80px;  /* менять */
+}
+
+.proj-text {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  max-width: 1080px;
+}
+
+.proj-sub-header {
+  margin-bottom: 30px;
+}
+
+.proj-pics {
+  gap: 60px;
+}
+
+/*   info   */
+
+.info-container {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  justify-content: space-between;
+
+}
+
+.form-input {
+  border-radius: 50px;
+  border: 1px solid black;
+  padding-left: 10px;
+  width: 270px;
+  box-sizing: border-box;
+  height: 50px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.form-input:hover {
+  opacity: 0.5;
+}
+
+.info-btn {
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #9d5cd0;
+  border: 2px solid #9d5cd0;
+  border-radius: 100px;
+  padding: 12px 35px;
+  width: 329px;
+  height: 50px;
+  transition: background-color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+.info-btn:hover {
+  background-color: #9d5cd0;
+  color: white;
+}
+
+.info-btn:active {
+  background-color: #7943a4;
+  color: white;
+}
+
+.info-address {
+  flex-direction: column;
+}
+
+.info-links {
+  flex-direction: column;
+}
+
+.info-header {
+  margin-bottom: 10px;
+}
+
+.link-text {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: #333;
+}
+
+.info-svg {
+  display: flex;
+  gap: 20px;
+}
+
+.forms {
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.info-address {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: #333;
+}
+
+.info-link {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.info-link:hover {
+  opacity: 0.5;
+}
+
+.footer-link svg path {
+  transition: fill 0.3s ease-in-out;
+  fill: #cacaca;
+}
+
+.footer-link:hover svg path {
+  fill: #9d5cd0;
+}
+
+
+/* footer */
+
+.footer-container {
+  background-color: black;
+  max-width: 1920px;
+  height: 120px;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.footer-links {
+  gap: 20px;
+}
+
+/* media запросы  */
+
+@media (max-width: 1440px) {
+
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .info-container {
+    flex-direction: column;
+  }
+
+  .forms {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .header__nav {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .header-container {
+    flex-wrap: wrap;
+    height: 150px;
+    justify-content: space-between;
+  }
+
+  .main-box__content {
+    margin-top: 100px;
+  }
+
+
+  .form-check {
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .gal-img {
+    padding-top: 30px;
+    margin-bottom: 30px;
+    max-width: 275px;
+    max-height: 275px;
+  }
+
+  .cat-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cat-sub-header {
+    margin-top: 20px;
+  }
+
+  .cat-img {
+    width: 100%;
+    max-height: 579px;
+  }
+
+  .cat-box {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main-box-container {
+    height: 621px;
+  }
+
+}
+
+@media (max-width: 980px) {
+
+  .event-row {
+    row-gap: 80px;
+  }
+
+  .info-btn {
+    max-width: 270px;
+    padding: 0;
+  }
+
+  .gal-img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .nav__list {
+    overflow: scroll;
+    gap: 44px;
+  }
+
+  .header__nav {
+    overflow: scroll;
+  }
+
+  .main-box-container {
+    background-image: url('../img/birmen-mid.png');
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 575px) {
+
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .nav__list {
+    gap: 35px;
+  }
+
+  .nav__link {
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .main-box__header {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 100%;
+    text-align: center;
+  }
+
+  .main-box__text {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .h2-header {
+    font-size: 35px;
+  }
+
+  .p-text {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .form-text {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .h3-header {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .link-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 178%;
+  }
+
+  .main-box__btn {
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 100px;
+    width: 200px;
+    height: 40px;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .main-box-container {
+    max-height: 400px;
+    padding-bottom: 40px;
+  }
+
+  .main-box__content {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .gal-container {
+    height: 1240px;
+    background-image: url('../img/gal-back-1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .gal-img {
+    max-width: 290px;
+    max-height: 290px;
+  }
+
+  .proj-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .event-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .proj-pics {
+    flex-direction: column;
+  }
+
+  /* .gal-col {
+    flex-direction: row;
+    justify-content: center;
+    не выравнивается
+  } */
+
+}
+
+@media (max-width: 400px) {
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .header-container {
+    max-height: 85px;
+    padding: 15px;
+  }
+
+  .main-box-container {
+    max-height: 338px;
+    background-image: url('../img/birmen-small.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .h2-header {
+    font-weight: 400;
+    font-size: 28px;
+  }
+
+  .p-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 200%;
+  }
+
+  .form-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+  }
+
+  .h3-header {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .link-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 178%;
+  }
+
+  .footer-container {
+    flex-direction: column-reverse;
+    max-height: 320px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+  }
+
+  .footer-logo {
+    max-height: 22px;
+    max-width: 100px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .info-header {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 178%;
+  }
+
+  .info-address {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .proj-sub-header {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 178%;
+  }
+
+  .nav__link {
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .main-box__header {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 87%;
+    text-align: center;
+    color: #fff;
+  }
+
+  .main-box__text {
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+
+  .main-box__btn {
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    border-radius: 100px;
+    width: 200px;
+    height: 40px;
+    flex-wrap: nowrap;
+    padding: 0;
+  }
+
+  .header__nav {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .header-logo {
+    max-height: 30px;
+  }
+
+  .event-img {
+    width: 100%;
+  }
+
+  .cat-text {
+    display: flex;
+    width: 100%;
+  }
+
+  .cat-row {
+    max-width: 320px;
+  }
+
+  .cat-img {
+    width: 100%;
+  }
+
+  .top-col {
+    max-width: 320px;
+  }
+
+  .about-us__content {
+    margin-top: 50px;
+  }
+
+  .cat-container {
+    padding-top: 50px;
+  }
+}
